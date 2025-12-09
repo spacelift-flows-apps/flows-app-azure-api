@@ -21,6 +21,6 @@ jobs:
     strategy:
       matrix:
         app: ${{ fromJSON(needs.generate-matrix.outputs.apps) }}
-    uses: spacelift-io/flows-community-registry/.github/workflows/build-app-version.yml@main
+    uses: spacelift-flows-apps/flows-community-registry/.github/workflows/build-app-version.yml@main
     with:
       working-directory: generated/${{ matrix.app }}
